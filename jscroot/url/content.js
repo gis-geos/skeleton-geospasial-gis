@@ -60,13 +60,13 @@ export function getURLContentJS() {
         case "messages":
             return url.view.content + "messages.js";
         case "notifications/geointersect":
-            return url.view.content + "notifications/blocked.js";
+            return url.view.content + "notifications/geointersect.js";
         case "notifications/geowithin":
-            return url.view.content + "notifications/silenced.js";
+            return url.view.content + "notifications/geowithin.js";
         case "notifications/geonear":
-            return url.view.content + "notifications/publish.js";
+            return url.view.content + "notifications/geonear.js";
         case "notifications/geonearsphere":
-            return url.view.content + "notifications/program.js";
+            return url.view.content + "notifications/geonearsphere.js";
         case "notifications/geomaxdistance":
             return url.view.content + "notifications/geomaxdistance.js";
         case "notifications/geomindistance":
@@ -79,6 +79,16 @@ export function getURLContentJS() {
             return url.view.content + "saved.js";
         case "logout":
             return url.view.content + "logout.js";
+        case "crud/get":
+            return url.template.content + "geojson/table.html";
+        case "map/ch1":
+            return url.template.content + "geojson/ch1.html";
+        case "map/ch2":
+            return url.template.content + "geojson/ch2.html";
+        case "map/ch3":
+            return url.template.content + "geojson/ch3.html";
+        case "map/ch4":
+            return url.template.content + "geojson/ch4.html";
         default:
             return url.view.content + "home.js";
     }
