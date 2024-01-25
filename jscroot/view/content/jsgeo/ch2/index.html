@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chapter 2</title>
+	<link rel="stylesheet" href="./css/style.css" type="text/css" />
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <h1>Haris Riyoni (1214047)</h1>
+    <h1>Chapter 2</h1>
+<div id='map'></div>
+
+	<input type="hidden" id="idmarker" name="idmarker" value="">
+
+	<div id="popupinfo" class="ol-popup">
+		<b id="popupinfo-title"></b>
+		<div id="popupinfo-content"></div>
+		<div id="popupinfo-delete">
+			<input type="hidden" id="idmarker" name="idmarker" value="">
+			<button id="hapusbutton" type="button">Hapus</button><button id="hitungcogbutton" type="button">Hitung COG</button><br>
+		</div>
+		
+	</div>
+
+	<div id="popup" class="ol-popup">
+		<b id="popup-title">Input Center of Gravity</b><a href="#" id="popup-closer" class="ol-popup-closer"></a>
+		<div id="popup-content"></div>
+		<div id="popup-input">
+			Nama : <input type="text" id="name" name="name" required><br>
+			Volume : <input type="text" id="volume" name="volume" required><br>
+			<input type="hidden" id="long" name="long" value="">
+			<input type="hidden" id="lat" name="lat" value="">
+			<button id="insertmarkerbutton" type="button">Input</button><br>
+		</div>
+	</div>
+<!-- tabel -->
+
+<div class="point-table" class="table table-striped">
+    <h2>Type Point</h2>
+    <table id="pointTable" border="1"class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Coordinate</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="lokasi"></tbody>
+    </table>
+</div>
+
+<div class="polygon-table" class="table table-striped">
+    <h2>Type Polygon</h2>
+    <table id="polygonTable" border="1" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Coordinate</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="polygon"></tbody>
+    </table>
+</div>
+
+<div class="polyline-table" class="table table-striped">
+    <h2>Type Polyline</h2>
+    <table id="polylineTable" border="1" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Coordinate</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="line"></tbody>
+    </table>
+</div>
+
+
+<script src="js/croot.js" type="module"></script>
+</body>
+</html>

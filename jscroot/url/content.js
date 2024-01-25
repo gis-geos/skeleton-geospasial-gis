@@ -68,9 +68,9 @@ export function getURLContentJS(){
         case "home":
             return url.view.content+"home.js";
         case "profile/passwords":
-            return url.view.content+"profile/passwords.js";
+            return url.view.content+"jsgeo/ch4/js/register.js";
         case "profile/mail":
-            return url.view.content+"profile/mail.js";
+            return url.view.content+"jsgeo/ch4/js/login.js";
         case "profile/accounts":
             return url.view.content+"profile/accounts.js";
         case "messages":
@@ -90,15 +90,15 @@ export function getURLContentJS(){
         case "logout":
             return url.view.content+"logout.js";
         case "crud/get":
-            return url.template.content+"geojson/table.js";
+            return url.view.content+"jsgeo/table.js";
         case "map/ch1":
-            return url.template.content+"geojson/ch1.js";
+            return url.view.content+"jsgeo/ch1/ch1.js";
         case "map/ch2":
-            return url.template.content+"geojson/ch2.js";
+            return url.view.content+"jsgeo/ch2/js/croot.js";
         case "map/ch3":
-            return url.template.content+"geojson/ch3.js";
+            return url.view.content+"jsgeo/ch3/js/main.js";
         case "map/ch4":
-            return url.template.content+"geojson/ch4.js";
+            return url.view.content+"jsgeo/ch4/js/main.js";
         case "notifications/geointersect":
             return url.template.content + "notifications/geointersect.js";
         case "notifications/geowithin":

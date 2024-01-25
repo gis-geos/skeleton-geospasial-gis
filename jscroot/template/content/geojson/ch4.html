@@ -1,23 +1,13 @@
-<div>
-    <h1 style="text-align: center;">Geographic Information System</h1>
-    <h2 style="text-align: center;">NPM: 1214017</h2>
-    <h2 style="text-align: center;">Nama : Rofi Nafiis Zain</h2>
-    <h2 style="text-align: center;">Kelas : 14-21-01</h2>
-    <h2 style="text-align: center;">Chapter 4 POST API Google Cloud Function</h2>
+
+<h1 class="text-xl text-gray-800 font-bold text-center">Haris Riyoni</h1>
+<h1 class="text-xl text-gray-800 font-bold text-center">3A Informatics Engineering</h1>
+<h1 class="text-xl text-gray-800 font-bold text-center"><strong>1214047</strong></h1>
+
+
+
     <div id='map'></div>
-    <div class="col-auto">
-        <span class="input-group">
-          <label class="input-group-text" for="type">Geometry type:</label>
-          <select class="form-select" id="type">
-            <option value="Point">Point</option>
-            <option value="LineString">LineString</option>
-            <option value="Polygon">Polygon</option>
-            <option value="Circle">Circle</option>
-            <option value="None" selected>None</option>
-          </select>
-          <input class="form-control" type="button" value="Undo" id="undo">
-        </span>
-      </div>
+    
+      
         <input type="hidden" id="idmarker" name="idmarker" value="">
     
         <div id="popupinfo" class="ol-popup">
@@ -41,47 +31,134 @@
                 <button id="insertmarkerbutton" type="button">Input</button><br>
             </div>
         </div>
-<div id="info-table">
-    <div class="point-table">
-    <h1>Type Point</h1>
-    <table id="pointTable" border="1">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th >Coordinate</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody id="lokasi"></tbody>
-    </table>
-</div>
+        <div class="col-auto text-center">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="type">Geometry type:</label>
+            <select class="form-select block mx-auto rounded-md mb-2 bg-blue-100 focus:ring focus:ring-blue-200 focus:ring-opacity-50" id="type">
+                <option value="Point">Point</option>
+                <option value="LineString">LineString</option>
+                <option value="Polygon">Polygon</option>
+                <option value="Circle">Circle</option>
+                <option value="None" selected>None</option>
+            </select>
+            <input class="btn btn-sm" type="button" value="Undo" id="undo">
+        </div>
+   
+  
 
-<div class="polygon-table">
-    <h1>Type Polygon</h1>
-    <table id="polygonTable" border="1">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Coordinate</th>
-                <th>Type</th>
-            </tr>
-        </thead>
-        <tbody id="polygon"></tbody>
-    </table>
-</div>
+<div id="info-table"> 
 
-<div class="polyline-table">
-    <h1>Type Polyline</h1>
-    <table id="polylineTable" border="1">
-        <thead>
+<div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+      <div class="rounded-t mb-0 px-4 py-3 border-0">
+        <div class="flex flex-wrap items-center">
+          <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+            <h3 class="font-semibold text-base text-blueGray-700">Type Polygon</h3>
+          </div>
+          <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+            <button class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="block w-full overflow-x-auto" id="point-table">
+        <table class="items-center bg-transparent w-full border-collapse " id="pointTable">
+          <thead>
             <tr>
-                <th>Name</th>
-                <th>Coordinate</th>
-                <th>Type</th>
+              <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Name
+                          </th>
+            <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Coodinate
+                          </th>
+             <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Type
+                          </th>
             </tr>
-        </thead>
-        <tbody id="line"></tbody>
-    </table>
-</div>
-</div>
+          </thead>
+  
+          <tbody id="lokasi"></tbody>
+           
+  
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+      <div class="rounded-t mb-0 px-4 py-3 border-0">
+        <div class="flex flex-wrap items-center">
+          <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+            <h3 class="font-semibold text-base text-blueGray-700">Type Polygon</h3>
+          </div>
+          <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+            <button class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="block w-full overflow-x-auto" id="polygon-table">
+        <table class="items-center bg-transparent w-full border-collapse " id="polygontable">
+          <thead>
+            <tr>
+              <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Name
+                          </th>
+            <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Coodinate
+                          </th>
+             <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Type
+                          </th>
+            </tr>
+          </thead>
+  
+          <tbody id="polygon"></tbody>
+           
+  
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+      <div class="rounded-t mb-0 px-4 py-3 border-0">
+        <div class="flex flex-wrap items-center">
+          <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+            <h3 class="font-semibold text-base text-blueGray-700">Type Polyline</h3>
+          </div>
+          <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+            <button class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="block w-full overflow-x-auto" id="polyline-table">
+        <table class="items-center bg-transparent w-full border-collapse " id="polylinetable">
+          <thead>
+            <tr>
+              <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Name
+                          </th>
+            <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Coodinate
+                          </th>
+             <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Type
+                          </th>
+            </tr>
+          </thead>
+  
+          <tbody id="line"></tbody>
+           
+  
+        </table>
+      </div>
+    </div>
+  </div>
 </div>

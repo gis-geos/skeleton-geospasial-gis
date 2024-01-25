@@ -9,13 +9,16 @@ import {runAfterHeader,runAfterContent,runAfterHashChange} from "./controller/ma
 
 
 //adding CSS
+
+addCSS("https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css");
+addCSS("https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css");
+
 addCSS("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
 addCSS("https://unpkg.com/bulma@0.9.4/css/bulma.min.css");
 addCSS("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 addCSS("https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css");
 addCSS("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js");
 addCSS("assets/css/styles.css");
-addCSS("https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js");
 //rendering HTML
 insertHTML(url.template.header,id.header,runAfterHeader);
 insertHTML(getContentURL(),id.content,runAfterContent);
